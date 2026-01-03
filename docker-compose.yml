@@ -1,0 +1,13 @@
+services:
+  shopify:
+    build: .
+    container_name: shopify
+    environment:
+      - SHOPIFY_FLAG_HOST=0.0.0.0
+      - SHOPIFY_FLAG_PORT=8080
+    command: ["theme", "dev"]
+    volumes:
+      - ./.shopify:/root/.config
+      - ./app/theme:/app
+    ports:
+      - "${PORT:-8080}:8080"

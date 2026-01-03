@@ -1,0 +1,4 @@
+services:
+  shopify:
+    environment:
+      - SHOPIFY_FLAG_STORE=<YOUR_STORE_ID>, i.e. https://admin.shopify.com/store/<YOUR_STORE_ID>/
